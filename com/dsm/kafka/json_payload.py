@@ -35,7 +35,7 @@ if __name__ == '__main__':
         .readStream\
         .format("kafka")\
         .option("kafka.bootstrap.servers", app_secret["kafka"]["server"] + ":9092")\
-        .option("subscribe", app_conf["kafka"]["topic"])\
+        .option("subscribe", app_conf["kafka"]["topic2"])\
         .load()
 
     # Watermark in order to handle late arriving data. Spark’s engine automatically tracks the current event time
